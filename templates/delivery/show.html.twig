@@ -4,28 +4,33 @@
 
 {% block body %}
     <h1>Delivery</h1>
-
     <table class="table">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ delivery.id }}</td>
-            </tr>
-            <tr>
+        
+               
+            
                 <th>Lang</th>
-                <td>{{ delivery.lang }}</td>
-            </tr>
-            <tr>
+                <td  id="lang">{{ delivery.lang }}</td>
+            
+        
                 <th>Attitude</th>
-                <td>{{ delivery.attitude }}</td>
-            </tr>
-            <tr>
+                <td id="lat">{{ delivery.attitude }}</td>
+            
+        
                 <th>Price</th>
-                <td>{{ delivery.price }}</td>
-            </tr>
+                <td>{{ delivery.price }} D.T</td>
+            
         </tbody>
     </table>
 
+    <div class="container-wrap">
+        <div class="row no-gutters d-md-flex align-items-center">
+            <div class="col-md-6 d-flex align-selftch">
+                <div id="map"></div>
+            </div>
+          
+        </div>
+    </div>
     <a href="{{ path('app_delivery_index') }}">back to list</a>
 
     <a href="{{ path('app_delivery_edit', {'id': delivery.id}) }}">edit</a>

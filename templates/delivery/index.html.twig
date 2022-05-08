@@ -8,7 +8,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+               
                 <th>Lang</th>
                 <th>Attitude</th>
                 <th>Price</th>
@@ -19,10 +19,9 @@
         <tbody>
         {% for delivery in deliveries %}
             <tr>
-                <td>{{ delivery.id }}</td>
                 <td>{{ delivery.lang }}</td>
                 <td>{{ delivery.attitude }}</td>
-                <td>{{ delivery.price }}</td>
+                <td>{{ delivery.price }} D.T</td>
                 <td>{{ delivery.commande.user.username }}</td>
                 <td>
                     <a href="{{ path('app_delivery_show', {'id': delivery.id}) }}">show</a>
